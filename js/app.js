@@ -58,6 +58,7 @@ let elem_pl2 = document.querySelector(".act_p-2");
 let elem2 = document.querySelector(".act_m-2");
 
 let shopCart_count = document.getElementById('shopCart-count');
+let shopCart_count2 = document.getElementById('shopCart-count2');
 
 let issue__count = document.querySelector(".count_icon-class");
 let issue__count2 = document.querySelector(".count_icon-class2");
@@ -274,12 +275,12 @@ function validate() {
         flag = 1;
         cart['tshirt']['priceafter'] = cart['tshirt']['count']*cart['tshirt']['price'];
         cart['tshirt']['priceaftersalesfter'] = cart['tshirt']['count']*cart  ['tshirt']  ['priceaftersale'];
-        // document.getElementById("shopCart-count").innerHTML = cart['tshirt']['count'];
         sumCart();
         count_icon();
     } else if (document.getElementById('checkbox_2').checked == false) {
         flag = 0;
         document.getElementById("shopCart-count").innerHTML = cart['tshirt']['count']-cart['tshirt']['count'];
+        document.getElementById("shopCart-count2").innerHTML = cart['tshirt']['count']-cart['tshirt']['count'];
         cart['tshirt']['priceafter']=0;
         cart['tshirt']['priceaftersalesfter'] = 0;
         document.getElementById("all").innerHTML = Math.round(cart['tshirt']['priceafter'] + cart['phone']['priceafter'] + cart['pen']['priceafter']).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
@@ -341,6 +342,7 @@ function validateAll(){
         flag_pen = 1;
 
         document.getElementById("shopCart-count").innerHTML = 3;
+        document.getElementById("shopCart-count2").innerHTML = 3;
 
         cart['tshirt']['priceafter'] = cart['tshirt']['count']*cart['tshirt']['price'];
         cart['tshirt']['priceaftersalesfter'] = cart['tshirt']['count']*cart  ['tshirt']  ['priceaftersale'];
@@ -355,6 +357,7 @@ function validateAll(){
         count_icon();
     } else if (check_all.checked == false) {
         document.getElementById("shopCart-count").innerHTML = 0;
+        document.getElementById("shopCart-count2").innerHTML = 0;
 
         cart['tshirt']['priceafter'] = 0;
         cart['tshirt']['priceaftersalesfter'] = 0;
@@ -377,15 +380,19 @@ validatePen();
 function shopCart(){
     if (document.getElementById('checkbox_2').checked || document.getElementById('checkbox_3').checked || document.getElementById('checkbox_4').checked){
         document.getElementById("shopCart-count").innerHTML = 1;
+        document.getElementById("shopCart-count2").innerHTML = 1;
     } 
     if ((document.getElementById('checkbox_2').checked && document.getElementById('checkbox_3').checked) || (document.getElementById('checkbox_2').checked && document.getElementById('checkbox_4').checked) || (document.getElementById('checkbox_3').checked && document.getElementById('checkbox_4').checked)){
         document.getElementById("shopCart-count").innerHTML = 2;
+        document.getElementById("shopCart-count2").innerHTML = 2;
     }
     if (document.getElementById('checkbox_2').checked && document.getElementById('checkbox_3').checked && document.getElementById('checkbox_4').checked){
         document.getElementById("shopCart-count").innerHTML = 3;
+        document.getElementById("shopCart-count2").innerHTML = 3;
     } 
     if (document.getElementById('checkbox_2').checked==false && document.getElementById('checkbox_3').checked==false && document.getElementById('checkbox_4').checked==false) {
         document.getElementById("shopCart-count").innerHTML = 0;
+        document.getElementById("shopCart-count2").innerHTML = 0;
     }
 }
 

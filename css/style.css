@@ -125,11 +125,12 @@ body{
 .header__title {
     margin: 0px 0px 0px 16px;
     max-width: 106px;
-    font-size: 28px;
+    font-size: 24px;
     line-height: 24px;
     letter-spacing: 0.02em;
     color: #FFFFFF;
     text-align: left;
+    text-transform: uppercase;
 }
 
 .header__search {}
@@ -259,6 +260,10 @@ body{
 }
 
 @media (max-width: 460px) {
+    .header{
+        padding: 11px 0 0;
+        height: 80px;
+    }
     .header__container{
         padding: 0px 13px;
     }
@@ -266,13 +271,17 @@ body{
         display: none;
     }
     .header__title{
-        margin: 0px 16px;
+        margin-top: 0px;
+        margin: 3px 7px 0 0;
         flex: 1 1 auto;
         max-width: 100%;
         justify-content: center;
         text-align: center;
         text-transform: uppercase;
         font-weight: 600;
+        font-size: 22px;
+        line-height: 24px;
+        letter-spacing: 0.02em;
     }
     .catalog__item::after,
     .catalog__item::before{
@@ -298,7 +307,6 @@ body{
 
 .main__container {
     display: flex;
-    
 }
 
 /* Блок КОРЗИНА==================================================== */
@@ -315,7 +323,7 @@ body{
     font-size: 28px;
     line-height: 36px;
     letter-spacing: -0.01em;
-    margin: 0px 0px 27px 0px;
+    margin: 0px 0px 24.5px 0px;
 }
 
 .shop__block {}
@@ -343,6 +351,7 @@ body{
 
 .title__text{
     margin-left: 33px;
+    margin-right: 11px;
     font-size: 16px;
     line-height: 24px;
     flex: 1 1 auto;
@@ -350,18 +359,19 @@ body{
 
 .title__item {
     position: relative;
-    top: 8px;
+    top: 10px;
     flex: 0 0 16px;
 }
 
 
 .title__spoiler.active .title__item{
-    top: -8px;
+    top: -10px;
     transform: rotate(180deg);
 }
 
 .title__checkbox{
     position: relative;
+    margin-top: 2px;
 }
 
 .checkbox__input{
@@ -416,7 +426,7 @@ body{
 }
 /* Начинка с товарами=========================================== */
 .block__content {
-    margin: 16px 0px 0px 0px;
+    margin: 17px 0px 0px 0px;
     visibility: visible;
     display: flex;
     flex-direction: column;
@@ -425,6 +435,10 @@ body{
 .content-block-2,
 .content-block-1{
     margin: 0px 0px 32px 0px;
+}
+
+.content-block-3{
+    margin-top: -3px;
 }
 
 .content-block-3,
@@ -455,11 +469,11 @@ body{
     height: 1px;
     background-color: rgba(0, 0, 0, 0.1);
     max-width: 100%;
-    margin: 0px 0px 11px 0px;
+    margin: 0px 0px 12px 0px;
 }
 
 .top_center{
-    margin-top: 36px;
+    margin-top: 40px;
 }
 
 .content-block__check{
@@ -565,7 +579,7 @@ body{
     border-radius: 8px;
     width: 100px;
     height: 44px;
-    margin: 0px 0px 8px 0px;
+    margin: -2px 0px 10px 0px;
 }
 
 .counter-block__minus.no_act_m{
@@ -622,11 +636,11 @@ body{
 }
 
 .balance-block__title {
-    margin-right: 5px;
+    margin-right: 4px;
 }
 
 .balance-block__kol {
-    margin-right: 5px;
+    margin-right: 4px;
 }
 
 .balance-block__val {}
@@ -639,10 +653,17 @@ body{
 }
 
 .icon_1{
-    margin: 0px 19px 0px 0px;
+    margin: 1px 37px 0px 0px;
     position: absolute;
     top: 0;
-    left: 50%;
+    /* left: 50%; */
+}
+
+.icon_2 {
+    margin: 1px 3px 0px 0px;
+    position: absolute;
+    top: 0;
+    /* left: 50%; */
 }
 
 .red{
@@ -689,16 +710,13 @@ body{
 
 .price-block__pricefin {
     display: flex;
-    margin: 0px 0px 5px 0px;
+    text-align: end;
     font-weight: 700;
-    font-size: 20px;
-    line-height: 28px;
-    letter-spacing: -0.01em;
+    margin-bottom: 6px;
 }
 
 .price-block__price{
     position: relative;
-    /* width: 239px; */
     cursor: pointer;
 }
 
@@ -742,17 +760,22 @@ body{
     color: #000000;
 }
 
-.pricefin__price {}
+.pricefin__price {
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: -0.01em;
+    margin-top: -2px;
+}
 
 .pricefin__val {
-    margin: 0px 0px 0px 7px;
+    margin: 0px 0px 0px 4px;
+    font-size: 16px;
+    line-height: 24px;
 }
 
 .price-block__price {
     display: flex;
     color: #A0A0A4;
-    /* text-decoration: line-through; */
-    /* text-decoration: dashed underline; */
     border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
     position: relative;
 }
@@ -772,7 +795,7 @@ body{
 }
 
 .price__val {
-    margin: 0px 0px 0px 7px;
+    margin: 0px 0px 0px 2px;
 }
 
 /* ==================================================== */
@@ -856,11 +879,15 @@ body{
 }
 /* absence==================================================== */
 .absence__block{
-    margin: 40px 0px 0px 0px;
+    margin: 40px 0px 40px 0px;
 }
 
 .absence{
     color: #A0A0A4;
+}
+
+.add-weig{
+    max-width: 309px;
 }
 
 /* ДОСТАВКА==================================================== */
@@ -869,7 +896,7 @@ body{
 }
 
 .block-red{
-    padding: 16px 24px 24px 24px;
+    padding: 11px 24px 24px 24px;
     background: #FFFFFF;
     border-radius: 16px;
     font-size: 16px;
@@ -881,6 +908,7 @@ body{
 .delivery__top {
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
     margin: 0px 0px 16px 0px;
 }
 
@@ -888,6 +916,7 @@ body{
     font-weight: 700;
     font-size: 24px;
     line-height: 32px;
+    letter-spacing: -0.01em;
 }
 
 .delivery__link {
@@ -907,21 +936,23 @@ body{
     font-size: 16px;
     line-height: 24px;
     flex: 0 1 177px;
+    margin-right: 9px;
 }
 
 .issue__adress {
     display: flex;
-    margin: 0px 0px 16px 0px;
+    margin: 0px 0px 12px 0px;
 }
 
 .adress__block{}
 
 .adress__name {
-    margin: 0px 0px 4px 0px;
+    margin: 0px 0px 0px 0px;
 }
 
 .adress__info {
     display: flex;
+    font-size: 13px;
 }
 
 .ingo__img{
@@ -948,10 +979,14 @@ body{
 
 .issue__data {
     display: flex;
-    margin: 0px 0px 16px 0px;
+    /* margin: 0px 0px 16px 0px; */
 }
 
 .data__title {}
+
+.issue__data-nomarg {
+    margin-bottom: 24px;
+}
 
 .issue__product {
     display: flex;
@@ -991,15 +1026,18 @@ body{
 
 .issue__info {
     display: flex;
+    align-items: center;
 }
 
 .issue__info-title {
-    margin: 0px 0px 0px 8px;
+    margin: 0px 0px 0px 9px;
+    font-size: 13px;
+    line-height: 16px;
 }
 
 .issue__info-img{
-    width: 22px;
-    height: 22x;
+    width: 20px;
+    height: 20px;
 }
 
 .issue__info-title span{
@@ -1013,7 +1051,16 @@ body{
 .pay__card {
     display: flex;
     align-items: center;
-    margin: 0px 0px 8px 0px;
+    margin: 0px 0px 6px 0px;
+}
+
+.add-function{
+    margin-top: 6px;
+}
+
+.pai__number.size{
+    font-size: 16px;
+    line-height: 24px;
 }
 
 .pay__img {
@@ -1038,14 +1085,19 @@ body{
     font-size: 16px;
     line-height: 24px;
     color: #A0A0A4;
-    margin-bottom: 19px;
-    margin-top: 19px;
+    margin-bottom: 12px;
+    margin-top: 22px;
+    max-width: 700px;
 }
 
 .title_form{
     color: #A0A0A4;
-    font-size: 13px;
+    font-size: 16px;
     line-height: 16px;
+}
+
+.size-placeholder::-webkit-input-placeholder {
+    font-size: 16px;
 }
 
 .receiver__name {
@@ -1062,6 +1114,7 @@ body{
 
 .receiver__bottom {
     display: flex;
+    max-width: 700px;
 }
 
 .receiver__name-form,
@@ -1121,10 +1174,9 @@ body{
     position: relative;
 }
 .icon_1s{
-    margin: 0px 30px 0px 0px;
+    margin: 0px 36px 0px 0px;
     position: absolute;
     top: 0;
-    margin-left: 20px;
 }
 .icon_2s{
     position: absolute;
@@ -1180,12 +1232,16 @@ body{
     margin: 0;
 }
 
-.absence__block {
-    margin: 37px 0px 40px 0px;
+.add-marg{
+    margin: -6px 0 0 0;
 }
 
 .receiver__name-title{
     display: block;
+}
+
+.add-margin_foot{
+    margin-bottom: 38px;
 }
 
 /* Блок ИТОГО==================================================== */
@@ -1194,7 +1250,7 @@ body{
 .total {
     margin: 22px 0px 0px 32px;
     padding: 16px 24px 24px 24px;
-    flex: 0 1 30%;
+    flex: 0 1 429px;
     justify-content: flex-end;
     max-height: 572px;
 
@@ -1209,7 +1265,7 @@ body{
     line-height: 32px;
     letter-spacing: -0.01em;
     font-weight: 700;
-    margin-bottom: 9px;
+    margin-bottom: 8px;
 }
 
 .total-top__title {
@@ -1218,6 +1274,7 @@ body{
 
 .total-top__price {
     display: flex;
+    align-items: flex-end;
 }
 
 .top-price__val {
@@ -1225,7 +1282,9 @@ body{
 }
 
 .top-price__currency {
+    font-size: 20px;
     margin-left: 5px;
+    line-height: 28px;
 }
 
 .total__sum {
@@ -1294,14 +1353,19 @@ body{
     margin-bottom: 13px;
 }
 
-.issue__info {
-    margin-bottom: 13px;
+/* .issue__info {
+    margin-bottom: 24px;
+} */
+
+.add-mar{
+    margin-bottom: 9px;
 }
 
 .frame {
     background: #F6F6FA;
-    padding: 8px 8px 12px;
+    padding: 8px 8px 12px 9px;
     border-radius: 8px;
+    
 }
 
 .issue__info-img{
@@ -1347,12 +1411,14 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    text-align: center;
 }
 
 .total-pay__title {
     font-weight: 700;
     font-size: 16px;
     line-height: 24px;
+    margin-bottom: 4px;
 }
 
 .total-pay__link {}
@@ -1364,10 +1430,13 @@ body{
 }
 
 .pay__img {
-    margin-right: 8px;
+    /* margin-right: 8px; */
 }
 
-.pai__number {}
+.pai__number {
+    line-height: 16px;
+    font-size: 13px;
+}
 
 .pay__promptly{
     background: #F6F6FA;
@@ -1384,6 +1453,7 @@ body{
 .right{
     font-size: 13px;
     line-height: 16px;
+    margin-top: 3px;
 }
 
 .pay-promptly__text{
@@ -1409,9 +1479,13 @@ body{
 }
 
 .agreement__text{
-    margin-left: 21px;
+    margin-left: 24px;
     font-size: 13px;
     line-height: 16px;
+}
+
+.total__agreement {
+    margin-left: -4px;
 }
 
 .checkbox__agreement{
@@ -1538,7 +1612,8 @@ body{
         margin-top: 10px;
     }
     .shop__title{
-        margin-bottom: 18px;
+        margin-bottom: 12px;
+        font-size: 20px;
     }
     .main__container{
         padding: 0 16px;
@@ -1552,7 +1627,10 @@ body{
         display: flex;
         align-items: center;
         flex-direction: row;
-        margin-top: 15px;
+        margin-top:6px;
+    }
+    .count-block-margin{
+        margin-top: 18px;
     }
     .content-block__count.indent {
         /* flex: none; */
@@ -1593,17 +1671,24 @@ body{
     }
     .price-block__price {
         margin-right: 5px;
-        font-size: 13px;
+        font-size: 16px;
     }
     .review-block__title{
-        font-size: 16px;
+        font-size: 14px;
         max-width: 100%;
+        margin-top: -1px;
+        margin-left: -3px;
+        line-height: 20px;
         /* white-space: nowrap; */
         overflow: hidden;
         display: -webkit-box;
         text-overflow: ellipsis;
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
+    }
+    .review-block__color{
+        margin-top: -2px;
+        margin-left: -3px;
     }
     .count-block__counter{
         margin-right: 16px;
@@ -1612,6 +1697,7 @@ body{
     }
     .count-block__balance{
         margin-right: 4px;
+        margin-bottom: 0;
     }
     .count-block__icon{
         /* margin-left: 20px; */
@@ -1622,35 +1708,59 @@ body{
     .icon_2{
         right: -60px;
     }
-    .indent2{
-        margin-bottom: 15px;
+    .icon_1s.ic1_margin{
+        margin-right: 47px;
+    }
+    .icon_2s.ic1_margin {
+        margin-right: 5px;
     }
     .content-block-1 {
-        margin: 12px 0 11px 0;
+        margin: 12px 0 16px 0;
     }
     .content-block-2 {
         margin: 0 0 11px 0;
     }
     .content-block-2::after{
             content: "";
-            margin-top: 16px;
+            margin-top: 17px;
             width: 100%;
             height: 1px;
             background: rgba(0, 0, 0, 0.1);
     }
     .content-block-1::after {
         content: "";
-        margin-top: 36px;
+        margin-top: 15px;
         width: 100%;
         height: 1px;
         background: rgba(0, 0, 0, 0.1);
     }
+    .content-block-1.cb1_add-mar::after{
+        content: "";
+        margin-top: 36px;
+    }
+    .content-block-2.cb1_add-mar::after {
+        content: "";
+        margin-top: -2px;
+    }
     .absence_block{
-        margin-top: -110px;
+        margin-top: -100px;
     }
     .indent{
-        margin-top: 30px;
+        margin-top: 70px;
         margin-left: auto;
+    }
+    .indent2 {
+        margin-bottom: 36px;
+        margin-top: 48px;
+    }
+    .indent3 {
+        margin-top: 75px;
+    }
+    .icon_1{
+        margin-right: -4px;
+    }
+    .icon_2 {
+        margin-right: 14px;
     }
     .icon_1s{
         margin-right: 36px;
@@ -1678,7 +1788,10 @@ body{
     .receiver__tel,
     .receiver__last{
         flex: 0;
-        margin-bottom: 32px;
+        margin-bottom: 18px;
+    }
+    .receiver__last{
+        margin-bottom: 0;
     }
     .content-block__img img{
         width: 80px;
@@ -1703,12 +1816,14 @@ body{
         margin: 0px -16px;
     }
     .delivery__top{
-        align-items: center;
+        margin-top: 16px;
+        margin-bottom: 8px;
     }
     .issue__data,
     .issue__price,
     .issue__adress{
         flex-direction: column;
+        margin-bottom: 12px;
     }
     .title-delivery{
         flex: 1 1 auto;
@@ -1718,14 +1833,32 @@ body{
     }
     .adress__info{
         font-size: 13px;
-        margin-top: 4px;
+        margin-top: 0px;
     }
+    
     .data__title{
         margin-bottom: 12px;
+        margin-top: 6px;
+    }
+    .data_of2 {
+        margin-top: -4px;
+        margin-bottom: 10px;
     }
     .issue__info{
         font-size: 13px;
         line-height: 16px;
+    }
+    .issue__info-img{
+        margin-top: -6px;
+        margin-left: 10px;
+        text-align: center;
+    }
+    .issue__info-title{
+        margin-top: -2px;
+        margin-right: 15px;
+    }
+    .pay__promptly{
+        margin-top: -55px;
     }
     .pay__block{
         margin: 12px -16px;
@@ -1734,10 +1867,20 @@ body{
         margin: 0px -16px;
     }
     .main__total{
-        margin: 16px -16px 0;
+        margin: -6px -23px 0;
     }
     .content-block__img_size {
         display: flex;
+    }
+    .block-red{
+        padding: 10px 16px 24px;
+    }
+    .receiver__block.add-margin_foot{
+        margin-top: 20px;
+    }
+    .add-function{
+        margin: 0;
+        margin-bottom: 8px;
     }
 }
 /* footer==================================================== */
@@ -2052,6 +2195,12 @@ body{
 }
 
 @media (max-width: 530px) {
+    .total {
+            /* flex: 0 1 303px; */
+            background: none;
+            box-shadow: none;
+            border-radius: 0;
+        }
     .pay-buttom__delivery {
         font-size: 12px;
         padding: 11px 4px 13px;
@@ -2061,4 +2210,124 @@ body{
         font-size: 12px;
         padding: 11px 4px 13px;
     }
+
+    .title__item{
+        margin-right: 3px;
+    }
+    .pricefin__price{
+        margin-left: -2px;
+        font-size: 16px;
+    }
+    .price__price{
+        font-size: 13px;
+    }
+    .price__val{
+        font-size: 13px;
+    }
+    .review-block__storage{
+        margin-left: -3px;
+    }
+    .absence__block{
+        margin-top: 48px;
+    }
+    .total__top{
+        font-size: 20px;
+        line-height: 28px;
+    }
+    .issue__data-nomarg{
+        background: #F0ECF4;
+        border-radius: 8px;
+        /* margin: 0; */
+        margin-top: -14px;
+    }
+    .issue__info-size{
+        margin: 0;
+        margin-top: -6px;
+    }
+    .pay__promptly-margin{
+        /* margin: 0; */
+        margin-top: -45px;
+        margin-left: -2px;
+        background: #F0ECF4;
+        border-radius: 8px;
+    }
+    .total__agreement{
+        margin-bottom: 18px;
+    }
+}
+
+
+@media (max-width: 1115px) {
+    .total{
+        flex: 0 1 303px;
+    }
+    .content-block-1{
+        margin-top: 1px;
+        margin-bottom: 31px;
+    }
+}
+
+/*===========================================================*/
+.footer320 {
+    display: none;
+    max-height: 56px;
+    padding: 17px 16px 18px;
+}
+
+.footer320_list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer320_item {
+    position: relative;
+}
+
+.item_foot {}
+
+.item_foot img{
+    width: 28px;
+    height: 28px;
+}
+
+.count320-top {
+    color: #FFFFFF;
+    width: 16px;
+    height: 16px;
+    top: -5px;
+    right: -5px;
+    position: absolute;
+    background: #F55123;
+    border-radius: 16px;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 530px) {
+    .footer320 {
+        display: block;
+    }
+}
+
+@media (max-width: 460px) {
+    .cb2_marg {
+        margin-top: -18px;
+    }
+}
+
+@media (max-width: 700px) {
+    .total-delivery__adress,
+        .total-pay {
+            opacity: 0;
+        }
+    
+        .total__delivery,
+        .total-delivery__data,
+        .total-pay__top {
+            display: none;
+        }
 }
